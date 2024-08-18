@@ -1,1 +1,1 @@
-A Minecraft schematic renderer made in Rust.
+A Minecraft schematic renderer written in Rust.

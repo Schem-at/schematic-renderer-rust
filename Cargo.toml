@@ -1,6 +1,13 @@
 [package]
 name = "schematic-renderer-rust"
 version = "0.1.0"
+authors = ["cmoa <cmoa58@gmail.com>"]
+description = "A Minecraft schematic renderer written in Rust"
+repository = "https://github.com/Schem-at/schematic-renderer-rust"
 edition = "2021"
 
+[lib]
+crate-type = ["cdylib"]
+
 [dependencies]
+wasm-bindgen = "0.2"
