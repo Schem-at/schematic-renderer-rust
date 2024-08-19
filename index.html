@@ -3,13 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <title>Schematic renderer example</title>
+    <style>
+      body, canvas {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
   </head>
+
   <body>
+    <canvas id="renderCanvas"></canvas>
+
     <script type="module">
-      import init, { greet } from "./pkg/schematic_renderer_rust.js";
-      init().then(() => {
-        greet("World");
-      });
+      import init, { run } from "./pkg/schematic_renderer_rust.js";
+      async function main() {
+        await init();
+        run();
+      }
+      main();
     </script>
+
   </body>
 </html>
